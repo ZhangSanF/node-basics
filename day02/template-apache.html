@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+</head>
+<body>
+
+    <!-- <div id="listingParsingErrorBox">糟糕！Google Chrome无法解读服务器所发送的数据。请<a href="http://code.google.com/p/chromium/issues/entry">报告错误</a>，并附上<a href="LOCATION">原始列表</a>。</div> -->
+    
+    <h1 id="header">E:\www\ 的索引</h1>
+    
+    <!-- <div id="parentDirLinkBox" style="display: block;">
+      <a id="parentDirLink" class="icon up" href="/E:/www/..">
+        <span id="parentDirText">[上级目录]</span>
+      </a>
+    </div> -->
+    
+    <table>
+      <thead>
+        <tr class="header" id="theader">
+          <th onclick="javascript:sortTable(0);">名称</th>
+          <th class="detailsColumn" onclick="javascript:sortTable(1);">
+            大小
+          </th>
+          <th class="detailsColumn" onclick="javascript:sortTable(2);">
+            修改日期
+          </th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+            {{each files}}
+            <tr>
+                <td data-value="apple/"><a class="icon dir" href="/E:/www/apple/">{{$value}}/</a></td>
+                <td class="detailsColumn" data-value="0"></td><td class="detailsColumn" data-value="1539844963">2018/10/18 下午2:42:43</td>
+            </tr>
+            {{/each}}
+        <!-- <tr>
+            <td data-value="apple/"><a class="icon dir" href="/E:/www/apple/">apple/</a></td>
+            <td class="detailsColumn" data-value="0"></td><td class="detailsColumn" data-value="1539844963">2018/10/18 下午2:42:43</td>
+        </tr>
+        <tr>
+            <td data-value="3.jpg"><a class="icon file" draggable="true" href="/E:/www/3.jpg">3.jpg</a></td>
+            <td class="detailsColumn" data-value="36900">36.0 kB</td><td class="detailsColumn" data-value="1366529270">2013/4/21 下午3:27:50</td>
+        </tr>
+        <tr>
+            <td data-value="a.txt"><a class="icon file" draggable="true" href="/E:/www/a.txt">a.txt</a></td>
+            <td class="detailsColumn" data-value="6">6 B</td><td class="detailsColumn" data-value="1539844940">2018/10/18 下午2:42:20</td>
+        </tr>
+        <tr>
+            <td data-value="index.html"><a class="icon file" draggable="true" href="/E:/www/index.html">index.html</a></td>
+            <td class="detailsColumn" data-value="288">288 B</td><td class="detailsColumn" data-value="1539844925">2018/10/18 下午2:42:05</td>
+        </tr> -->
+    </tbody>
+    </table>
+    </body>
+</html>

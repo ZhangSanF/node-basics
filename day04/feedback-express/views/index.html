@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 处理静态资源
+        浏览器收到 HTML 响应内容之后,就要开始从上到下依次解析
+        当在解析的过程中,如果发现:
+        link
+        script
+        img
+        iframe
+        video
+        audio
+        等具有 src 或者 href(link) 属性标签(具有外链的资源)的时候,浏览器会自动对这些资源发起新的请求
+     -->
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <h1>首页</h1>
+    <img src="/static/img/1.jpg" alt="">
+    <a href="/post">发表留言</a>
+    <ul>
+        {{each comments}}
+        <li>{{$value.name}}说:{{$value.message}}{{$value.dateTime}}</li>
+        {{/each}}
+    </ul>
+</body>
+</html>

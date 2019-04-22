@@ -1,0 +1,23 @@
+
+// 下载安装
+// 配置环境变量 把 bin 目录的路径配置到 path 中
+// mongod -v 查看
+// http://www.runoob.com/mongodb/mongodb-tutorial.html 菜鸟教程
+// mongodb 默认使用执行 mongod 命令所处盘符根目录下的 /data/db 作为自己的数据存储目录
+    // 所以第一次执行该命名之前先自己手动新建一个 /data/db 
+//   执行 mongod 命令
+// 连接数据库命名  mongo  退出连接  exit
+
+// 基本命令
+    // show dbs  查看显示所有数据库
+    // db  查看当前操作的数据库
+    // use 数据库名称  切换到指定的数据库(如果没有会新建)
+    // show collections  查集合
+    // db.集合名.find()  查集合内的数据
+
+// 操作
+    // 使用官方的 mongodb 包来操作 https://github.com/mongodb/node-mongodb-native
+    // 使用第三方 mongoose 来操作 MongoDB  https://mongoosejs.com/
+
+// MongoDB 可视化工具
+mongobooster 

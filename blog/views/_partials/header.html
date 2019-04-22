@@ -1,0 +1,16 @@
+
+<div style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 0 50px">
+    <div>hello world</div>
+    <div>
+        {{ if user }}     
+            <span>当前用户是 {{ user.nickname }}</span>
+            <a href="">个人主页</a>
+            <a href="">设置</a>
+            <a href="/logout">退出</a>
+            <a href="" class="btn btn-default">发起</a>
+        {{ else }}
+            <a href="/login" class="btn btn-success">登录</a>
+            <a href="/register" class="btn btn-danger">注册</a>
+        {{ /if }}
+    </div>
+</div>

@@ -1,0 +1,26 @@
+
+{{ extend './_layouts/home.html' }}
+
+{{ block 'title' }}
+    {{'多人博客 - 首页'}}
+{{ /block }}
+
+{{ block 'style' }}
+<style>
+    ul{list-style: none;}
+</style>
+{{ /block }}
+
+{{ block 'content' }}
+<ul>
+    <li>
+        <div style="float: left;">
+            <img style="width: 50px;" src="/public/img/download.gif" alt="">
+        </div>
+        <div>
+            <p style="color: red;">Media heading</p>
+            <p>sueysok 回复了 </p>
+        </div>
+    </li>
+</ul>
+{{ /block }}
